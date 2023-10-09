@@ -1,0 +1,26 @@
+nav {
+  border-bottom: 1.6px solid #eaeaeb;
+  padding: 20px 0px;
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    max-width: 1400px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .nav-logo {
+    }
+
+    .nav-list {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
