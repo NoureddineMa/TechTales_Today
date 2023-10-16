@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { PrismaClient } from '../generated/client';
 import bcrypt from 'bcrypt';
 import { Prisma } from '../generated/client';
+const jwt = require('jsonwebtoken')
 
 const prisma = new PrismaClient();
 
@@ -40,4 +41,36 @@ const Register = async (req: Request, res: Response) => {
   }
 };
 
-export { Register };
+
+// Login 
+
+const Login = async (req:Request , res:Response) => {
+
+    const { Email , Password } = req.body;
+
+    if(!Email || !Password ){
+      res.status(400)
+         .json({message : "Please Provide Both Email and Password !"})
+    }
+
+    const user = await prisma.user.findFirst({
+      where : { Email }
+    })
+
+    if (!user){
+      return res.status(400).json({messge: "User Not Found"})
+    }
+    const passwordMatch = await bcrypt.compare(Password, user.Password)
+
+    if (!passwordMatch){
+      return res.status(400).json({message: "Invalid Password"})
+    }
+
+    const token = jwt.sign({ userId : user.id } , process.env.JWT_SECRET , {
+      expiresIn: '24h'
+    })
+
+    res.json({token})
+}
+
+export { Register  , Login };

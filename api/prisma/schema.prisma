@@ -13,11 +13,10 @@ datasource db {
 
 // define User Model :
 
-model User {
-  id        Int    @id @map("_id")
-  FirstName String 
+model user {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  FirstName String
   LastName  String
   Email     String @unique
   Password  String
 }
-
