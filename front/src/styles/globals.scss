@@ -13,3 +13,18 @@ body {
     margin-right: auto;
   }
 }
+
+// importing pages
+@import "./pages/about.scss";
+@import "./pages/blogs.scss";
+@import "./pages/contact.scss";
+@import "./pages/home.scss";
+
+// importing Components
+
+// atoms
+
+// molecules
+
+// organisms
+@import "./components/organisms/navbar";
