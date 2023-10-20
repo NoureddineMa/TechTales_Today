@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "./variables.scss";
+@import "./mixins.scss";
 
 body {
   font-family: $poppins_font !important;
