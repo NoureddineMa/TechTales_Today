@@ -1,7 +1,8 @@
-nav {
+header {
   border-bottom: 1.6px solid #eaeaeb;
   padding: 20px 0px;
-  .nav-container {
+  background-color: $primary_color;
+  nav {
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
