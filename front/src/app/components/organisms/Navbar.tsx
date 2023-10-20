@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <header>
       <nav>
-        <div className="nav-logo">Riven</div>
+        <div className="nav-logo">TechTales</div>
         <NavList />
         <NavActions />
       </nav>
