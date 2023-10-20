@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/organisms/Navbar";
 
 function Blogs() {
   return (
