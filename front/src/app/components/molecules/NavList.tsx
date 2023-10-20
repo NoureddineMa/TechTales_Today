@@ -31,7 +31,10 @@ function NavList() {
         </Link>
       </li>
       <li>
-        <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
+        <Link
+          className={`link ${pathname === "/Contact" ? "active" : ""}`}
+          href="/Contact"
+        >
           Contact us
         </Link>
       </li>
