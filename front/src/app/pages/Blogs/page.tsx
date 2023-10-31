@@ -1,9 +1,12 @@
+import BlogsSearch from "@/app/components/templates/BlogsSearch";
 import React from "react";
 
 function Blogs() {
   return (
     <>
-      <section>Blogs</section>
+      <main>
+        <BlogsSearch />
+      </main>
     </>
   );
 }
