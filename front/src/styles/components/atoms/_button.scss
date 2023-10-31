@@ -1,0 +1,34 @@
+.btn {
+  padding: 3px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  @include transition(all, 0.3s, ease);
+
+  &:hover {
+    background-color: $color_10_hover;
+  }
+}
+
+.btn-primary {
+  background-color: $color_10;
+  color: $light_text_color;
+  padding: 5px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: $color_10;
+  border: 1.5px solid $color_10;
+  padding: 5px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+
+  &:hover {
+    color: $light_text_color;
+  }
+}
