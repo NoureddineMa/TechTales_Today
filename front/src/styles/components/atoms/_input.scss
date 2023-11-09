@@ -1,0 +1,28 @@
+.input_container {
+  @include flex-container();
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+  background-color: $input_background_color;
+  padding: 10px 20px;
+  border-radius: 6px;
+  overflow: hidden;
+
+  .icon-container {
+    svg {
+      height: 20px;
+      color: $color_10;
+    }
+  }
+
+  input {
+    flex: 1;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+}
