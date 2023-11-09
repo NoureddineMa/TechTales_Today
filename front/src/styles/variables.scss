@@ -1,3 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 
+// fonts
 $poppins_font: "Poppins", sans-serif;
+
+// colors
+$color_60: #fff;
+$color_30: #fff;
+$color_10: #ed2939;
+$color_10_hover: #e0091b;
+$light_text_color: #fff;
+$dark_text_color: #333333;
+$grey_text_color: #a5a5a6;
+$header_border_color: #eaeaeb;
+$input_background_color: #f1f1f1;
+
+// sizing
+$page_max_width: 1440px;
+$nav_padding: 0px 20px;
+$header_padding: 20px 0px;
+$section_padding: 40px 20px 20px 20px;

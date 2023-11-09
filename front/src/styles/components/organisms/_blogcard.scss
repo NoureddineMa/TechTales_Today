@@ -1,0 +1,20 @@
+.blog-card {
+  @include flex-container();
+
+  .image-container {
+    @include flex-container(row, center, center);
+    overflow: hidden;
+    border-radius: 12px;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.blog-card-lg {
+  height: 400px;
+}
+
+.blog-card-sm {
+  height: 120px;
+}
