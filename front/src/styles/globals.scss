@@ -33,6 +33,8 @@ body {
 
 // organisms
 @import "./components/organisms/navbar";
+@import "./components/organisms/blogcard";
 
 // templates
 @import "./components/templates/blogsearch";
+@import "./components/templates/bloggrid";

@@ -1,4 +1,5 @@
-import BlogsSearch from "@/app/components/templates/BlogsSearch";
+import BlogsGrid from "@/app/components/templates/Blogs/BlogsGrid";
+import BlogsSearch from "@/app/components/templates/Blogs/BlogsSearch";
 import React from "react";
 
 function Blogs() {
@@ -6,6 +7,7 @@ function Blogs() {
     <>
       <main>
         <BlogsSearch />
+        <BlogsGrid />
       </main>
     </>
   );
