@@ -5,7 +5,9 @@ interface InputProps {
   type: string;
   className?: string;
   isDisabled?: boolean;
-  onInput?: () => void;
+  icon?: React.ReactNode;
+  value: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function Input({
@@ -13,15 +15,19 @@ function Input({
   type,
   className,
   isDisabled,
-  onInput,
+  icon,
+  value,
+  onChange,
 }: InputProps) {
   return (
     <div className={`input_container ${className}`}>
+      <div className="icon-container">{icon}</div>
       <input
+        value={value}
         type={type}
         placeholder={placeholder}
         disabled={isDisabled}
-        onInput={onInput}
+        onChange={onChange}
       />
     </div>
   );
