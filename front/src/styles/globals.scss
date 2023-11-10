@@ -3,13 +3,41 @@
 @tailwind utilities;
 
 @import "./variables.scss";
+@import "./mixins.scss";
 
 body {
   font-family: $poppins_font !important;
   main {
-    padding: 20px;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: $page_max_width;
+    margin-inline: auto;
+
+    section {
+      padding: $section_padding;
+    }
   }
 }
+
+// importing pages
+@import "./pages/about.scss";
+@import "./pages/blogs.scss";
+@import "./pages/contact.scss";
+@import "./pages/home.scss";
+
+// importing Components
+
+// atoms
+@import "./components/atoms/button";
+@import "./components/atoms/input";
+
+// molecules
+@import "./components/molecules/bloginfo.scss";
+@import "./components/molecules/navactions.scss";
+@import "./components/molecules/navlist.scss";
+
+// organisms
+@import "./components/organisms/navbar";
+@import "./components/organisms/blogcard";
+
+// templates
+@import "./components/templates/blogsearch";
+@import "./components/templates/bloggrid";
