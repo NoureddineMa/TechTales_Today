@@ -1,26 +1,27 @@
+"use client"
+
 import "../styles/globals.scss";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Navbar from "./components/organisms/Navbar";
+import { useEffect, useState } from 'react';
+import { Inter } from 'next/font/google';
+import Navbar from './components/organisms/Navbar';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: "Tech Tales",
-  description: "Basic blog application",
-};
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const [pathname, setPathname] = useState('');
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        {pathname === '/login' || pathname === '/register' ? <> </>  : <Navbar />}
         {children}
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
