@@ -113,7 +113,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\Maher\\Desktop\\TechTales_Today\\API\\src\\generated\\client",
+      "value": "C:\\Users\\Maher\\Desktop\\TechTales_Today\\api\\src\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -140,6 +140,7 @@ const config = {
     "db"
   ],
   "activeProvider": "mongodb",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -148,8 +149,9 @@ const config = {
       }
     }
   },
-  "inlineSchema": "Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuLi9zcmMvZ2VuZXJhdGVkL2NsaWVudCIKfQoKZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAibW9uZ29kYiIKICB1cmwgICAgICA9IGVudigiREFUQUJBU0VfVVJMIikKfQoKLy8gZGVmaW5lIFVzZXIgTW9kZWwgOgoKbW9kZWwgdXNlciB7CiAgaWQgU3RyaW5nIEBpZCBAZGVmYXVsdChhdXRvKCkpIEBtYXAoIl9pZCIpIEBkYi5PYmplY3RJZAogIEZpcnN0TmFtZSBTdHJpbmcKICBMYXN0TmFtZSAgU3RyaW5nCiAgRW1haWwgICAgIFN0cmluZyBAdW5pcXVlCiAgUGFzc3dvcmQgIFN0cmluZwp9Cg==",
-  "inlineSchemaHash": "6db1ff33a35de8d40b911952d2db2e9e37db303cda5c6d08d1c3bde4909f51fb"
+  "inlineSchema": "Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwNCi8vIGxlYXJuIG1vcmUgYWJvdXQgaXQgaW4gdGhlIGRvY3M6IGh0dHBzOi8vcHJpcy5seS9kL3ByaXNtYS1zY2hlbWENCg0KZ2VuZXJhdG9yIGNsaWVudCB7DQogIHByb3ZpZGVyID0gInByaXNtYS1jbGllbnQtanMiDQogIG91dHB1dCAgID0gIi4uL3NyYy9nZW5lcmF0ZWQvY2xpZW50Ig0KfQ0KDQpkYXRhc291cmNlIGRiIHsNCiAgcHJvdmlkZXIgPSAibW9uZ29kYiINCiAgdXJsICAgICAgPSBlbnYoIkRBVEFCQVNFX1VSTCIpDQp9DQoNCi8vIGRlZmluZSBVc2VyIE1vZGVsIDoNCg0KbW9kZWwgdXNlciB7DQogIGlkIFN0cmluZyBAaWQgQGRlZmF1bHQoYXV0bygpKSBAbWFwKCJfaWQiKSBAZGIuT2JqZWN0SWQNCiAgRmlyc3ROYW1lIFN0cmluZw0KICBMYXN0TmFtZSAgU3RyaW5nDQogIEVtYWlsICAgICBTdHJpbmcgQHVuaXF1ZQ0KICBQYXNzd29yZCAgU3RyaW5nDQp9DQo=",
+  "inlineSchemaHash": "e8042cbce0cc4b3f5db89d46470b4ac85f398b2aefe4c4e6cf1a66617b6c7fd9",
+  "noEngine": false
 }
 
 const fs = require('fs')
