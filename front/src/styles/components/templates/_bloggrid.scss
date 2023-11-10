@@ -1,2 +1,9 @@
-.blogs_grid_section {
+.blogs-grid-section {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+
+  .blog-card-lg {
+    grid-column: 1 / 4;
+  }
 }
