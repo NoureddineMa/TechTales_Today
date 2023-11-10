@@ -26,3 +26,12 @@
     }
   }
 }
+
+.input_auth {
+  @include flex-container();
+  width: 17rem;
+  padding: 10px 20px;
+  background-color: $input_background_color;
+  border-radius: 6px;
+  overflow: hidden;
+}
