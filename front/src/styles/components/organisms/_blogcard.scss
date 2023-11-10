@@ -1,8 +1,25 @@
+.container {
+  max-height: 4em;
+  line-height: 1.3em;
+  overflow: hidden;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  @include prefix(line-clamp, 3);
+  @include prefix(box-orient, vertical);
+}
+
 .blog-card {
   @include flex-container();
 
   .image-container {
     @include flex-container(row, center, center);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     border-radius: 12px;
     img {
@@ -12,9 +29,115 @@
 }
 
 .blog-card-lg {
-  height: 400px;
+  gap: 40px;
+  .image-container {
+    flex: 1;
+  }
+  article {
+    @include flex-container(column);
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex: 1;
+
+    .blog-info {
+      .content {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      &:first-child {
+        .content {
+          color: #5073f0;
+
+          .dot {
+            background-color: #5073f0;
+          }
+        }
+      }
+      &:last-child {
+        .content {
+          color: $grey_text_color;
+
+          .dot {
+            background-color: $grey_text_color;
+          }
+        }
+      }
+    }
+
+    .link {
+      font-size: 35px;
+      font-weight: 600;
+      @include transition(all, 0.3s, ease);
+
+      &:hover {
+        color: #5073f0;
+      }
+    }
+  }
 }
 
 .blog-card-sm {
-  height: 120px;
+  @include flex-container(column);
+  gap: 20px;
+  .image-container {
+    height: 200px;
+  }
+
+  article {
+    @include flex-container(column);
+    gap: 15px;
+
+    .blog-info {
+      .content {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      &:first-child {
+        .content {
+          color: #5073f0;
+
+          .dot {
+            background-color: #5073f0;
+          }
+        }
+      }
+
+      &:last-child {
+        .content {
+          color: $grey_text_color;
+
+          .dot {
+            background-color: $grey_text_color;
+          }
+        }
+      }
+    }
+
+    .link-container {
+      @extend .container;
+      .link {
+        font-size: 18px;
+        font-weight: 600;
+        @extend .ellipsis;
+        @include transition(all, 0.3s, ease);
+
+        &:hover {
+          color: #5073f0;
+        }
+      }
+    }
+
+    .description-container {
+      @extend .container;
+      .description {
+        font-size: 14px;
+        font-weight: 300;
+        color: $grey_text_color;
+        @extend .ellipsis;
+      }
+    }
+  }
 }

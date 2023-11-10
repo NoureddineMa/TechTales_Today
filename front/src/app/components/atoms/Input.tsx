@@ -21,7 +21,7 @@ function Input({
 }: InputProps) {
   return (
     <div className={`input_container ${className}`}>
-      <div className="icon-container">{icon}</div>
+      {icon && <div className="icon-container">{icon}</div>}
       <input
         value={value}
         type={type}

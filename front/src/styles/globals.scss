@@ -30,6 +30,9 @@ body {
 @import "./components/atoms/input";
 
 // molecules
+@import "./components/molecules/bloginfo.scss";
+@import "./components/molecules/navactions.scss";
+@import "./components/molecules/navlist.scss";
 
 // organisms
 @import "./components/organisms/navbar";
