@@ -18,14 +18,14 @@ function BlogsSearch() {
     setSearchTerm(e.target.value);
 
   return (
-    <section className="blogs_search_section">
+    <section className="blogs-search-section">
       <h1>Our Blogs</h1>
       <p>A center for all our resources & insights</p>
       <Input
         value={searchTerm}
         placeholder="Search our blogs by topic or keyword"
         type="text"
-        className="blogs_search_input"
+        className="blogs-search-input"
         icon={<FontAwesomeIcon icon={faSearch} />}
         onChange={handleSearch}
       />

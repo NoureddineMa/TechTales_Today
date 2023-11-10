@@ -1,4 +1,4 @@
-.blogs_search_section {
+.blogs-search-section {
   @include flex-container(column, flex-start, center);
   gap: 10px;
   h1 {
@@ -11,7 +11,7 @@
     color: $grey_text_color;
   }
 
-  .blogs_search_input {
+  .blogs-search-input {
     margin-top: 20px;
   }
 }
