@@ -67,7 +67,7 @@ const Page = () => {
         toast.success(res.data.message)
         setTimeout(() => {
           router.push('/login')
-        },3000)
+        },1000)
         console.log(res)
       }).catch((err) => {
         toast.error(err?.response?.data?.message)
