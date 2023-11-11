@@ -1,0 +1,29 @@
+.blogs-list-section {
+  @include flex-container(column);
+  gap: 30px;
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .blogs-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .btn-secondary {
+    margin-top: 20px;
+    width: fit-content;
+    align-self: center;
+    padding: 10px 25px;
+    border: 1.5px solid $grey_text_color;
+    color: $grey_text_color;
+
+    &:hover {
+      color: $light_text_color;
+      background-color: $grey_text_color;
+    }
+  }
+}
