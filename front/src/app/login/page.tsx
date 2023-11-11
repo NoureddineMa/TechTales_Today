@@ -8,6 +8,7 @@ import { useState , ChangeEvent , MouseEventHandler   } from "react";
 import Link from "next/link";
 import { Login } from "@/utils/Auth";
 import { Toaster, toast } from 'sonner'
+import { useRouter } from "next/navigation";
 
 
 const Page = () => {
@@ -42,7 +43,11 @@ const Page = () => {
       e.preventDefault()
       try {
         Login(userData).then(() => {
-         toast.success("Login Succesfully , bouhalla tell me what next?")
+         toast.success("Authentification Succesfully !")
+         setTimeout(() => {
+          const router = useRouter()
+          router.push('/home')
+         },1000)
         }).catch((err) => {
           toast.error(err?.response?.data?.message)
         })
