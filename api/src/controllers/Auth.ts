@@ -48,9 +48,8 @@ const Login = async (req:Request , res:Response) => {
 
     const { Email , Password } = req.body;
 
-    if(!Email || !Password ){
-      res.status(400)
-         .json({message : "Please Provide Both Email and Password !"})
+    if (!Email || !Password ){
+      return res.status(400).json({message : "Please Provide Both Email and Password !"})
     }
 
     const user = await prisma.user.findFirst({
@@ -58,12 +57,12 @@ const Login = async (req:Request , res:Response) => {
     })
 
     if (!user){
-      return res.status(400).json({messge: "User Not Found"})
+      return res.status(400).json({message: "Password Or Email Incorrect !"})
     }
     const passwordMatch = await bcrypt.compare(Password, user.Password)
 
     if (!passwordMatch){
-      return res.status(400).json({message: "Invalid Password"})
+      return res.status(400).json({message: "Invalid Password , try again please !"})
     }
 
     const token = jwt.sign({ userId : user.id } , process.env.JWT_SECRET , {
