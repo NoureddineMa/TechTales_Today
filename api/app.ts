@@ -5,6 +5,7 @@ import { checkDataBaseConnection } from "./config/Database.Init"
 import userRoutes from './src/routes/users.auth'
 import swaggerUi from 'swagger-ui-express';
 import swaggerSpec from "./swagger/swagger"
+import cors from 'cors'
 
 // set up middelwares :
 
@@ -18,6 +19,7 @@ app.listen(PORT, () => {
 // middelwares : 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
+app.use(cors())
 
 app.use('/auth',userRoutes)
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
