@@ -7,6 +7,8 @@ import Input from "../components/atoms/Input";
 import { useState , ChangeEvent , MouseEventHandler   } from "react";
 import Link from "next/link";
 import { Login } from "@/utils/Auth";
+import { Toaster, toast } from 'sonner'
+
 
 const Page = () => {
 
@@ -36,14 +38,13 @@ const Page = () => {
   };
 
 
-
   const handleLogin:MouseEventHandler<HTMLButtonElement> = (e)  => {
       e.preventDefault()
       try {
-        Login(userData).then((res) => {
-          console.log(res)
+        Login(userData).then(() => {
+         toast.success("Login Succesfully , bouhalla tell me what next?")
         }).catch((err) => {
-          console.log(err)
+          toast.error(err?.response?.data?.message)
         })
       } catch (error) {
         console.log(error)
@@ -55,7 +56,7 @@ const Page = () => {
       <main className="flex flex-col items-center px-3rem mt-[2rem]">
       <h1 className="font-bold text-2xl my-3">Login Page</h1>
       <span className="text-xs text-center">Lorem ipsum dolor sit amet consectetur  <br />
-       adipisicing elit. 
+      adipisicing elit. 
       </span>
 
       <div className="my-3">
@@ -73,8 +74,8 @@ const Page = () => {
       <span className="text-xs text-light">U dont have a account ?</span>
       <Link className="text-xs text-red-500" href={`/register`}>click here to register</Link>
       </div>
-
       </main>
+      <Toaster  />
     </Layout>
   );
 };
