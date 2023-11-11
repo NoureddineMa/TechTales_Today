@@ -18,6 +18,9 @@ const Page = () => {
     Password: string;
   }
 
+  const router = useRouter()
+
+
   const initialUserData:UserLoginDataProps = {
     Email: '',
     Password: '',
@@ -45,8 +48,7 @@ const Page = () => {
         Login(userData).then(() => {
          toast.success("Authentification Succesfully !")
          setTimeout(() => {
-          const router = useRouter()
-          router.push('/home')
+          router.push('/')
          },1000)
         }).catch((err) => {
           toast.error(err?.response?.data?.message)
