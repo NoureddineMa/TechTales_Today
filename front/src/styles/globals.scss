@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./variables.scss";
-@import "./mixins.scss";
+@import "./variables";
+@import "./mixins";
 
 body {
   font-family: $poppins_font !important;
@@ -18,10 +18,10 @@ body {
 }
 
 // importing pages
-@import "./pages/about.scss";
-@import "./pages/blogs.scss";
-@import "./pages/contact.scss";
-@import "./pages/home.scss";
+@import "./pages/about";
+@import "./pages/blogs";
+@import "./pages/contact";
+@import "./pages/home";
 
 // importing Components
 
@@ -30,15 +30,18 @@ body {
 @import "./components/atoms/input";
 
 // molecules
-@import "./components/molecules/bloginfo.scss";
-@import "./components/molecules/navactions.scss";
-@import "./components/molecules/navlist.scss";
+@import "./components/molecules/bloginfo";
+@import "./components/molecules/navactions";
+@import "./components/molecules/navlist";
+@import "./components/molecules/newslettersubmit";
 
 // organisms
 @import "./components/organisms/navbar";
 @import "./components/organisms/blogcard";
+@import "./components/organisms/newslettercontent";
 
 // templates
 @import "./components/templates/blogsearch";
 @import "./components/templates/bloggrid";
 @import "./components/templates/bloglist";
+@import "./components/templates/newsletter";
