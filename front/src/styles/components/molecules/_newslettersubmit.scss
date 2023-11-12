@@ -1,0 +1,10 @@
+.newsletter-submit-form {
+  @include flex-container();
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+
+  .input_container {
+    background-color: $color_30;
+  }
+}
