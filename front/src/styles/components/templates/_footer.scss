@@ -1,0 +1,45 @@
+.footer-section {
+  max-width: $page_max_width;
+  margin-inline: auto;
+  width: 100%;
+}
+
+footer {
+  @include flex-container(column);
+  gap: 50px;
+  margin-top: 40px;
+  background-color: $footer_bg_color;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .navigation-section {
+    @extend .footer-section;
+    @include flex-container(row, space-between);
+
+    .nav-list {
+      li {
+        .link {
+          color: $light_text_color;
+          position: relative;
+          align-self: flex-end;
+          @include transition(color, 0.3s, ease);
+          &:hover {
+            color: $color_10;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright-section {
+    @extend .footer-section;
+    @include flex-container(row, space-between);
+    color: $grey_text_color;
+    font-size: 14px;
+
+    .links-container {
+      @include flex-container();
+      gap: 10px;
+    }
+  }
+}

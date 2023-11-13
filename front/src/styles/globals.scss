@@ -28,15 +28,16 @@ body {
 // atoms
 @import "./components/atoms/button";
 @import "./components/atoms/input";
+@import "./components/atoms/socialmediabutton";
 
 // molecules
 @import "./components/molecules/bloginfo";
 @import "./components/molecules/navactions";
 @import "./components/molecules/navlist";
 @import "./components/molecules/newslettersubmit";
+@import "./components/molecules/socialmedia";
 
 // organisms
-@import "./components/organisms/navbar";
 @import "./components/organisms/blogcard";
 @import "./components/organisms/newslettercontent";
 
@@ -45,3 +46,5 @@ body {
 @import "./components/templates/bloggrid";
 @import "./components/templates/bloglist";
 @import "./components/templates/newsletter";
+@import "./components/templates/footer";
+@import "./components/templates/navbar";
