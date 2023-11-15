@@ -30,24 +30,18 @@ header {
     }
 
     .nav-list {
-      @include flex-container();
-      gap: 40px;
+      .link {
+        position: relative;
+        align-self: flex-end;
+        @include transition(color, 0.3s, ease);
+        @extend .underline-extend;
+        &:hover {
+          color: $color_10;
+        }
+      }
 
       li {
-        @include flex-container();
-        .link {
-          position: relative;
-          align-self: flex-end;
-          @include transition(color, 0.3s, ease);
-          @extend .underline-extend;
-
-          &:hover {
-            color: $color_10;
-          }
-        }
-
         .active {
-          color: $color_10;
           &::before {
             opacity: 1;
           }

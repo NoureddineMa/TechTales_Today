@@ -6,7 +6,7 @@ interface ButtonProps {
   isSubmit?: boolean;
   isPrimary: boolean;
   isDisabled?: boolean;
-  onClick?: () => void | undefined;
+  onClick?: () => void;
 }
 
 function Button({

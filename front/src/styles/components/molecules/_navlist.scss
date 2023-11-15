@@ -1,0 +1,12 @@
+.nav-list {
+  @include flex-container();
+  gap: 40px;
+
+  li {
+    @include flex-container();
+
+    .active {
+      color: $color_10 !important;
+    }
+  }
+}

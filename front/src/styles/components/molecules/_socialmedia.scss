@@ -1,0 +1,4 @@
+.social-media-container {
+  @include flex-container(row, flex-start, center);
+  gap: 10px;
+}
